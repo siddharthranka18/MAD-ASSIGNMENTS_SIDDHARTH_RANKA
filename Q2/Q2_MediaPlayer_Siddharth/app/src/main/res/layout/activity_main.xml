@@ -1,0 +1,63 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="70dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Media Player (Q2)"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/album_art"
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile_avatar"
+            android:visibility="visible"
+            app:shapeAppearanceOverlay="@style/RoundedImage" />
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#000000"
+            android:visibility="gone" /> <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select a file or URL to start"
+        android:textColor="#B3B3B3"
+        android:layout_marginTop="10dp"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:layout_marginTop="20dp">
+
+            <Button android:id="@+id/btnOpenFile" android:text="Open File" android:layout_margin="4dp" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/btnOpenURL" android:text="Open URL" android:layout_margin="4dp" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/btnPlay" android:text="Play" android:layout_margin="4dp" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/btnPause" android:text="Pause" android:layout_margin="4dp" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/btnStop" android:text="Stop" android:layout_margin="4dp" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/btnRestart" android:text="Restart" android:layout_margin="4dp" android:layout_columnWeight="1"/>
+        </GridLayout>
+
+    </LinearLayout>
+</ScrollView>
