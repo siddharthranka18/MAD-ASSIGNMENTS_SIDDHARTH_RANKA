@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
         return image;
     }
 
-    // --- NEW METHOD: Moves file from private storage to the user's picked folder ---
+
     private void saveImageToChosenFolder(File sourceFile, Uri destFolderUri) {
         try {
             DocumentFile pickedDir = DocumentFile.fromTreeUri(this, destFolderUri);
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 in.close();
                 out.close();
-                sourceFile.delete(); // Clean up temp file
+                sourceFile.delete();
             }
         } catch (IOException e) {
             e.printStackTrace();
