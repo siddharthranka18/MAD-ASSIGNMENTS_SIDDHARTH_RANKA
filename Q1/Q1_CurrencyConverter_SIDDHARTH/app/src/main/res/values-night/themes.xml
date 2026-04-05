@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Base.Theme.Q1_CurrencyConverter_SIDDHARTH" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">#BB86FC</item>
-        <item name="colorOnPrimary">#000000</item>
-        <item name="android:windowBackground">#121212</item>
-        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="colorPrimary">#4DB6AC</item> <item name="colorOnPrimary">#000000</item>
+        <item name="android:windowBackground">#0B1212</item> <item name="android:textColorPrimary">#E0E0E0</item>
+        <item name="android:textColorSecondary">#90A4AE</item>
+        <item name="android:statusBarColor">#0B1212</item>
     </style>
 
     <style name="Theme.Q1_CurrencyConverter_SIDDHARTH" parent="Base.Theme.Q1_CurrencyConverter_SIDDHARTH" />

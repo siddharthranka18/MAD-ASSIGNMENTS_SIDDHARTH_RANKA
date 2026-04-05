@@ -1,4 +1,5 @@
 package com.example.q1_currencyconverter_siddharth;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -12,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText etAmount;
     private Spinner spinnerFrom, spinnerTo;
     private TextView tvResult;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         int savedTheme = getSharedPreferences("Settings", MODE_PRIVATE).getInt("Theme", AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);

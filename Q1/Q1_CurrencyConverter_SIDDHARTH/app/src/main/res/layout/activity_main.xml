@@ -79,16 +79,16 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:src="@android:drawable/stat_notify_sync"
-            android:layout_margin="20dp"
+            android:layout_margin="12dp"
             android:background="?android:attr/selectableItemBackgroundBorderless"
-            app:tint="#6200EE" />
+            app:tint="?attr/colorPrimary" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="20dp"
-            app:cardElevation="12dp"
-            app:cardBackgroundColor="#6200EE">
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="?attr/colorPrimary">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -101,7 +101,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="0.00"
-                    android:textColor="#FFFFFF"
+                    android:textColor="?attr/colorOnPrimary"
                     android:textSize="36sp"
                     android:textStyle="bold"
                     android:textAlignment="center" />
@@ -112,7 +112,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="8dp"
-                    android:backgroundTint="#FFFFFF"/>
+                    android:backgroundTint="?attr/colorOnPrimary"/>
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -122,8 +123,8 @@
             android:layout_height="60dp"
             android:layout_marginTop="32dp"
             android:text="CONVERT"
-            android:backgroundTint="#6200EE"
-            android:textColor="#FFFFFF"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="?attr/colorOnPrimary"
             app:cornerRadius="15dp" />
 
     </LinearLayout>
