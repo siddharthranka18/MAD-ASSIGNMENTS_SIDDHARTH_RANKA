@@ -50,7 +50,6 @@
             android:layout_height="wrap_content"
             android:columnCount="2"
             android:layout_marginTop="20dp">
-
             <Button android:id="@+id/btnOpenFile" android:text="Open File" android:layout_margin="4dp" android:layout_columnWeight="1"/>
             <Button android:id="@+id/btnOpenURL" android:text="Open URL" android:layout_margin="4dp" android:layout_columnWeight="1"/>
             <Button android:id="@+id/btnPlay" android:text="Play" android:layout_margin="4dp" android:layout_columnWeight="1"/>

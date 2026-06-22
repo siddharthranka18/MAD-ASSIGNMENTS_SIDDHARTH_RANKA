@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
             // Hide video and stop it before picking audio
             videoView.stopPlayback();
             videoView.setVisibility(View.GONE);
-
             Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
             intent.setType("audio/*");
             startActivityForResult(intent, PICK_AUDIO_REQUEST);
@@ -61,8 +60,6 @@ public class MainActivity extends AppCompatActivity {
             videoView.setZOrderOnTop(true);
 
             statusText.setText("Connecting to Stream...");
-
-            // 5. When the video is ready, start it and update the status
             videoView.setOnPreparedListener(mp -> {
                 statusText.setText("LIVE (Streaming)");
                 videoView.start();
@@ -81,8 +78,7 @@ public class MainActivity extends AppCompatActivity {
             // 7. If the URL fails, play the local video silently
             videoView.setOnErrorListener((mp, what, extra) -> {
                 statusText.setText("Network Error - Loading Local");
-                videoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.test_video));
-                videoView.start();
+
                 return true;
             });
         });

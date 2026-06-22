@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         spinnerFrom = findViewById(R.id.spinnerFrom);
         spinnerTo = findViewById(R.id.spinnerTo);
         tvResult = findViewById(R.id.tvResult);
-        // Currencies: INR, USD, JPY, EUR
+        // Currencies-> INR, USD, JPY, EUR
         String[] currencies = {"INR", "USD", "JPY", "EUR"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_dropdown_item, currencies);

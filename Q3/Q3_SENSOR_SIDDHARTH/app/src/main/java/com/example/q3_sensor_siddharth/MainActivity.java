@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     public final void onSensorChanged(SensorEvent event) {
         if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
             tvAccelerometer.setText(String.format("X: %.2f\nY: %.2f\nZ: %.2f",
-                    event.values[0], event.values[1], event.values[2]));
+                    event.values[0], event.values[1], event.values[2])); //x-y-z axis
         }
         else if (event.sensor.getType() == Sensor.TYPE_LIGHT) {
             tvLight.setText(String.format("%.1f lx", event.values[0]));
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     @Override
     protected void onResume() {
         super.onResume();
-        if (accelerometer != null) sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_UI);
+        if (accelerometer != null) sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_UI);//plugs sensors and manages spped of updation
         if (lightSensor != null) sensorManager.registerListener(this, lightSensor, SensorManager.SENSOR_DELAY_UI);
         if (proximitySensor != null) sensorManager.registerListener(this, proximitySensor, SensorManager.SENSOR_DELAY_UI);
     }

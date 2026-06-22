@@ -39,8 +39,8 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
         //  OPEN DETAIL PAGE
         holder.imageView.setOnClickListener(v -> {
             Intent intent = new Intent(context, DetailActivity.class);
-            // We pass the URI as a String so DetailActivity can reconstruct it
-            intent.putExtra("image_path", uri.toString());
+            // we pass the URI as a String so DetailActivity can reconstruct it
+            intent.putExtra("image_path", uri.toString()); //attaches photo link to the intent  so the next page is known which photo u clcike d
             context.startActivity(intent);
         });
     }

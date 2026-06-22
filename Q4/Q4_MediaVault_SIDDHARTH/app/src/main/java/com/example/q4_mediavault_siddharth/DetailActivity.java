@@ -30,28 +30,23 @@ public class DetailActivity extends AppCompatActivity {
         // Get URI from Intent
         String uriString = getIntent().getStringExtra("image_path");
         if (uriString == null) return;
-
         Uri imageUri = Uri.parse(uriString);
         DocumentFile documentFile = DocumentFile.fromSingleUri(this, imageUri);
-
         if (documentFile != null && documentFile.exists()) {
             ivImage.setImageURI(imageUri);
-
             // i) View details using DocumentFile
             tvName.setText("Name: " + documentFile.getName());
             tvPath.setText("URI: " + imageUri.toString());
-
             long sizeKb = documentFile.length() / 1024;
             tvSize.setText("Size: " + sizeKb + " KB");
-
             String lastMod = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss", Locale.getDefault())
-                    .format(new Date(documentFile.lastModified()));
+                    .format(new Date(documentFile.lastModified())); //convert large string of numbers to readable frmat
             tvDate.setText("Date: " + lastMod);
         }
 
-        // ii) Delete with Scoped Storage support
+        //  delete with Scoped Storage support
         btnDelete.setOnClickListener(v -> {
-            new AlertDialog.Builder(this)
+            new AlertDialog.Builder(this) //are u sure
                     .setTitle("Confirm Deletion")
                     .setMessage("Are you sure you want to delete this image?")
                     .setPositiveButton("Delete", (dialog, which) -> {

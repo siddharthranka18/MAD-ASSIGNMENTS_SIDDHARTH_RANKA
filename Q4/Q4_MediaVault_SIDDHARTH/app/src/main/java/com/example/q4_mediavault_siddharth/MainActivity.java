@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
     private Uri currentFolderUri;
     private String currentPhotoPath;
-    private RecyclerView recyclerView;
     private ImageAdapter adapter;
     private final List<Uri> imageUris = new ArrayList<>();
 
@@ -41,7 +40,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerView = findViewById(R.id.recyclerViewGallery);
+
+
+        RecyclerView recyclerView = findViewById(R.id.recyclerViewGallery);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
         adapter = new ImageAdapter(this, imageUris);
         recyclerView.setAdapter(adapter);
